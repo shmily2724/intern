@@ -1,0 +1,5 @@
+./haplogrep classify \
+  --in Kinh_bac.fasta \
+  --format fasta \
+  --rsrs \
+  --out /media/shmily/writable/working/haplogrep2/Kinh_bac_rsrs.txt
