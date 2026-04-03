@@ -5,7 +5,7 @@ library(openxlsx)
 # =========================
 # 1. Đọc file haplogroup
 # =========================
-hg <- read.delim("Kinh_all_rcrs.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+hg <- read.delim("/media/shmily/writable/working/haplogrep2/Kinh_all_rcrs.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
 
 hg2 <- hg %>%
   select(SampleID, Haplogroup)
