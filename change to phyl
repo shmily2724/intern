@@ -1,0 +1,5 @@
+python3 - <<'PY'
+from Bio import AlignIO
+AlignIO.convert("aligned.fasta", "fasta", "aligned.phy", "phylip-relaxed")
+print("Done: aligned.phy")
+PY
