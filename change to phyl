@@ -1,5 +1,22 @@
 python3 - <<'PY'
-from Bio import AlignIO
-AlignIO.convert("aligned.fasta", "fasta", "aligned.phy", "phylip-relaxed")
-print("Done: aligned.phy")
+from Bio import SeqIO
+
+inp = "input.fasta"
+out = "output_sequential.phy"
+
+records = list(SeqIO.parse(inp, "fasta"))
+if not records:
+    raise SystemExit("FASTA rong")
+
+seqlen = len(records[0].seq)
+for r in records:
+    if len(r.seq) != seqlen:
+        raise SystemExit(f"Sequence khong cung do dai: {r.id}")
+
+with open(out, "w") as f:
+    f.write(f"{len(records)} {seqlen}\n")
+    for r in records:
+        f.write(f"{r.id} {str(r.seq)}\n")
+
+print(f"Da ghi: {out}")
 PY
