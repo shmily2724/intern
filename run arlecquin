@@ -1,0 +1,6 @@
+cd /media/shmily/writable/working/result
+
+  /media/shmily/writable/working/alerquin/arlecore_linux/arlecore352_64bit \
+  /media/shmily/writable/working/data/Kinh_all_8reg.arp \
+  /media/shmily/writable/working/data/kinh_all_8reg.ars \
+  run_silent
