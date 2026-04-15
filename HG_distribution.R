@@ -74,7 +74,7 @@ hg_order <- plot_df %>%
   arrange(desc(max_freq)) %>%
   pull(Haplogroup)
 
-plot_df$Haplogroup <- factor
+plot_df$Haplogroup <- factor(plot_df$Haplogroup, levels = hg_order)
 
 plot_df <- plot_df %>%
   mutate(
