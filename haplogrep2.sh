@@ -1,3 +1,4 @@
+#nhớ là conda activate haplogrep2
 ./haplogrep classify \
   --in Kinh_bac.fasta \
   --format fasta \
